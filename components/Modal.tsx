@@ -9,6 +9,7 @@ import SearchTags from './SearchTags'
 import { useMap } from 'react-leaflet'
 import { AxiosInstance } from '../api/RequestHandler'
 import { BASICS_ENDPOINTS } from '../api/endpoints/BasicsEndpoints'
+import {FC} from 'react'
 
 interface ModalComponentType {
   isModalVisible: boolean
@@ -32,7 +33,7 @@ target="_blank" rel="noreferrer noopener" aria-label=" (öffnet in neuem Tab)">
 
 
 
-export const ModalComponent: (props: ModalComponentType) => JSX.Element = (props: ModalComponentType) => {
+export const ModalComponent:FC<ModalComponentType> = (props) => {
 
   //common handlers
 

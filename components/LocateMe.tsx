@@ -6,7 +6,7 @@ import { AimOutlined } from '@ant-design/icons'
 import { createSlugPathFromQueryAndRemoveSlug } from '../utils/slug'
 
 
-const getCurrentPosition = async (): Promise<GeolocationPosition> => {
+export const getCurrentPosition = async (): Promise<GeolocationPosition> => {
   return new Promise((resolve, reject) => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -22,8 +22,9 @@ const getCurrentPosition = async (): Promise<GeolocationPosition> => {
 }
 
 
-const setQueryParamsToCurrentLocation = (router) => async () => {
+export const setQueryParamsToCurrentLocation = (router) => async () => {
   const { query } = router
+  console.log(122323233232)
 
   try {
     const currentPosition = await getCurrentPosition()
